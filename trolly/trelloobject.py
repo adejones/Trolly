@@ -22,8 +22,8 @@ class TrelloObject(object):
 
     def fetch_json(self, uri_path, http_method='GET', query_params=None, body=None, headers=None):
         return self.client.fetch_json(
-            uri_path=uri_path,
-            http_method=http_method,
+            uri_path=str(uri_path),
+            http_method=str(http_method),
             query_params=query_params or {},
             body=body,
             headers=headers or {}
